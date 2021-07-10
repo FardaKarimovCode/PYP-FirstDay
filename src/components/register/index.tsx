@@ -176,7 +176,7 @@ export const RegisterPage = () => {
                 validationSchema={SignupSchema}
                 onSubmit={(values) => {
                   values.phonenumber = String(values.phonenumber)
-                  axios.post("http://localhost:8805/register", {
+                  axios.post("https://final0project1server.herokuapp.com/register", {
                     firstname: values.firstname,
                     lastname: values.lastname,
                     email: values.email,
@@ -455,7 +455,7 @@ export const RegisterPage = () => {
                 validationSchema={SignInSchema}
                 onSubmit={(values) => {
                   axios
-                    .post("http://localhost:8805/login", {
+                    .post("https://final0project1server.herokuapp.com/login", {
                       email: values.email,
                       password: values.password,
                     })
